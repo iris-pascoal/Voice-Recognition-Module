@@ -11,6 +11,7 @@ This project is ran on a Arduino Uno Wifi. The packages needed are:
  - WiFiNINA
 
 ##Features
+
 *Voice activated commands for interfacing a smart kitchen
 *Auditory feedback
 
