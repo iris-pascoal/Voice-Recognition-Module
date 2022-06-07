@@ -37,7 +37,6 @@ const char* topicShelf2 = "shelf2";//publish
 const char* topicMoodStatus = "mood/state";//publish
 const char* topicMoodSection = "mood/section"; //publish
 const char* topicVRCommand = "voice_control/status";//publish
-const char* topicVRCommandLog = "voice_control/Command_log";//publish
 
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
@@ -160,7 +159,7 @@ bridge:
     // run normally
     pcSerial.println(F("Bridge not requested, run normally"));
     pcSerial.println(F("---"));
-    mqttClient.publish(topicVRCommandLog, "Bridge not requested, run normally");
+   
     break;
     
   case EasyVR::BRIDGE_NORMAL:
@@ -171,7 +170,6 @@ bridge:
     // resume normally if aborted
     pcSerial.println(F("Bridge connection aborted"));
     pcSerial.println(F("---"));
-     mqttClient.publish(topicVRCommandLog, "Bridge connection aborted");
     break;
     
   case EasyVR::BRIDGE_BOOT:
@@ -184,7 +182,6 @@ bridge:
     // resume normally if aborted
     pcSerial.println(F("Bridge connection aborted"));
     pcSerial.println(F("---"));
-    mqttClient.publish(topicVRCommandLog, "Bridge connection aborted");
     break;
   }
 
@@ -192,7 +189,6 @@ bridge:
   while (!easyvr.detect())
   {
     pcSerial.println(F("EasyVR not detected!"));
-    mqttClient.publish(topicVRCommandLog, "EasyVR not detected!");
     
     for (int i = 0; i < 10; ++i)
     {
@@ -204,7 +200,7 @@ bridge:
 
   pcSerial.print(F("EasyVR detected, version "));
   pcSerial.print(easyvr.getID());
-  mqttClient.publish(topicVRCommandLog, "EasyVR detected!");
+
 
   if (easyvr.getID() < EasyVR::EASYVR3)
     easyvr.setPinOutput(EasyVR::IO1, LOW); // Shield 2.0 LED off
@@ -249,14 +245,14 @@ void init_easyVR(){
     pcSerial.print("Say a word in Wordset ");
     pcSerial.println(-group);
     easyvr.recognizeWord(-group);
-    mqttClient.publish(topicVRCommandLog, "Say a command");
+
   }
   else // SD group
   {
     pcSerial.print("Say a command in Group ");
     pcSerial.println(group);
     easyvr.recognizeCommand(group);
-    mqttClient.publish(topicVRCommandLog, "Say a command...");
+
   }
 
   do
@@ -335,15 +331,13 @@ void init_easyVR(){
   {
     if (easyvr.isTimeout()){
       pcSerial.println("Timed out, try again...");
-      mqttClient.publish(topicVRCommandLog, "Timed out, try again...");
+ 
     }
     int16_t err = easyvr.getError();
     if (err >= 0)
     {
       pcSerial.print("Error ");
       pcSerial.println(err, HEX);
-      mqttClient.publish(topicVRCommandLog, "Error:");
-      mqttClient.publish(topicVRCommandLog, err);
     }
   }
 }
@@ -472,44 +466,43 @@ void action()
       break;
     case G1_TOMATOS:
       // write your action code here
-      mqttClient.publish(topicVRCommand,"Ketchup", true);
+      mqttClient.publish(topicVRCommand,"Tomatos", true);
       mqttClient.publish(topicMoodSection, "4");
       
       mqttClient.publish(topicShelf2, "2");
-      pcSerial.println("Ketchup\n");
+   
 
       
       // group = GROUP_X\SET_X; <-- or jump to another group or wordset for composite commands
       break;
     case G1_BEANS:
       // write your action code here
-      mqttClient.publish(topicVRCommand,"Ketchup", true);
+      mqttClient.publish(topicVRCommand,"Beans", true);
       mqttClient.publish(topicMoodSection, "4");
       
       mqttClient.publish(topicShelf2, "3");
-      pcSerial.println("Ketchup\n");
+     
 
       
       // group = GROUP_X\SET_X; <-- or jump to another group or wordset for composite commands
       break;
     case G1_SUGAR:
       // write your action code here
-      mqttClient.publish(topicVRCommand,"Ketchup", true);
+      mqttClient.publish(topicVRCommand,"Sugar", true);
       mqttClient.publish(topicMoodSection, "4");
       
       mqttClient.publish(topicShelf2, "4");
-      pcSerial.println("Ketchup\n");
+    
 
       
       // group = GROUP_X\SET_X; <-- or jump to another group or wordset for composite commands
       break;
     case G1_SALT:
       // write your action code here
-      mqttClient.publish(topicVRCommand,"Ketchup", true);
-      mqttClient.publish(topicMoodSection, "4");
+      mqttClient.publish(topicVRCommand,"Salt", true);
+      mqttClient.publish(topicMoodSection, "1");
       
-      mqttClient.publish(topicShelf2, "2");
-      pcSerial.println("Ketchup\n");
+
 
       
       // group = GROUP_X\SET_X; <-- or jump to another group or wordset for composite commands
