@@ -37,6 +37,7 @@ const char* topicShelf2 = "shelf2";//publish
 const char* topicMoodStatus = "mood/state";//publish
 const char* topicMoodSection = "mood/section"; //publish
 const char* topicVRCommand = "voice_control/status";//publish
+const char* topicVRCommandLog = "voice_control/Command_log";//publish
 
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
@@ -501,10 +502,9 @@ void action()
       // write your action code here
       mqttClient.publish(topicVRCommand,"Salt", true);
       mqttClient.publish(topicMoodSection, "1");
-      
 
-
-      
+      mqttClient.publish(topicShelf2, "2");
+     
       // group = GROUP_X\SET_X; <-- or jump to another group or wordset for composite commands
       break;
     case G1_CANDY:

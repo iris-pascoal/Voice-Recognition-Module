@@ -1,4 +1,4 @@
-#Voice Recognition Module
+# Voice Recognition Module
 
 Voice recognition module for smart kitchen
 
@@ -10,11 +10,11 @@ This project is ran on a Arduino Uno Wifi. The packages needed are:
  - PubSubClient
  - WiFiNINA
 
-##Features
+## Features
 *Voice activated commands for interfacing a smart kitchen
 *Auditory feedback
 
-##Avaiable Voice Commands
+## Avaiable Voice Commands
 |Commands       | Description |
 |---------------|----------------|
 |KITCHEN        |Activates the voice controlled kitchen|
@@ -43,7 +43,6 @@ This project is ran on a Arduino Uno Wifi. The packages needed are:
 |Bread          |Foods from the closet nº6 |
 |Milk           |Foods from the closet nº1 |
 |Soda           |Foods from the closet nº3 |
-|Spaghetti      |Foods from the closet nº4 |
 |Bacon          |Foods from the closet nº2 |
 |Foie Gras      |Foods from the closet nº3 |
 |Eggs           |Foods from the closet nº5 |
