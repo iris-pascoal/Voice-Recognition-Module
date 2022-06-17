@@ -49,7 +49,7 @@ unsigned long lastMsg = 0;
 char msg[MSG_BUFFER_SIZE];
 
 int setting = 0;
-int8_t fFood;
+int fFood = 13;
 
 //Groups and Commands
 enum Groups
@@ -102,14 +102,14 @@ G1_AUTOMATIC = 0,
 
 enum Group2 
 {
-  G2_WINE = 4,
-  G2_COOKIES = 5,
-  G2_CANDY = 13,
-  G2_COKE = 15,
-  G2_SODA = 19,
-  G2_BACON = 20,
-  G2_CHAMPAGNE = 24,
-  G2_BACK = 26,
+  G2_WINE = 0,
+  G2_COOKIES = 1,
+  G2_CANDY = 2,
+  G2_COKE = 3,
+  G2_SODA = 4,
+  G2_BACON = 5,
+  G2_CHAMPAGNE = 6,
+  G2_BACK = 7,
 };
 
 // use negative group for wordsets
@@ -209,6 +209,77 @@ void callback(char* topic, byte* payload, unsigned int length) {
       mqttClient.publish(topicVRCommand,"SAD", true);
       mqttClient.publish(topicMoodStatus, "2");
       pcSerial.println("Sad Mood\n");
+
+      pcSerial.println("Have some\n");
+      pcSerial.println(fFood);
+
+      switch(fFood){
+          case 4:
+            easyvr.playSound(39, EasyVR::VOL_FULL);
+            easyvr.playSound(9, EasyVR::VOL_FULL);
+            mqttClient.publish(topicVRCommand, "Wine", true);
+            mqttClient.publish(topicMoodSection, "1");
+      
+            mqttClient.publish(topicShelf1, "1");
+            pcSerial.println("Wine\n");
+          break;
+          case 5:
+            easyvr.playSound(14, EasyVR::VOL_FULL);
+            easyvr.playSound(9, EasyVR::VOL_FULL);
+            mqttClient.publish(topicVRCommand, "Cookies", true);
+            mqttClient.publish(topicMoodSection, "1");
+      
+            mqttClient.publish(topicShelf1, "2");
+          break;
+          case 13:
+            easyvr.playSound(6, EasyVR::VOL_FULL);
+            easyvr.playSound(11, EasyVR::VOL_FULL);
+            mqttClient.publish(topicVRCommand, "Candy", true);
+            mqttClient.publish(topicMoodSection, "2");
+      
+            mqttClient.publish(topicShelf3, "2");
+          break;
+          case 15:
+                // write your action code here
+            easyvr.playSound(13, EasyVR::VOL_FULL);
+            easyvr.playSound(11, EasyVR::VOL_FULL);
+            mqttClient.publish(topicVRCommand, "Soda", true);
+            mqttClient.publish(topicMoodSection, "2");
+      
+            mqttClient.publish(topicShelf3, "4");
+            pcSerial.println("Soda\n");
+          break;
+          case 19:
+                // write your action code here
+            easyvr.playSound(13, EasyVR::VOL_FULL);
+            easyvr.playSound(11, EasyVR::VOL_FULL);
+            mqttClient.publish(topicVRCommand, "Soda", true);
+            mqttClient.publish(topicMoodSection, "2");
+      
+            mqttClient.publish(topicShelf3, "4");
+            pcSerial.println("Soda\n");
+          break;
+          case 20:
+            easyvr.playSound(3, EasyVR::VOL_FULL);
+            easyvr.playSound(9, EasyVR::VOL_FULL);
+            mqttClient.publish(topicVRCommand, "Bacon", true);
+            mqttClient.publish(topicMoodSection, "1");
+      
+            mqttClient.publish(topicShelf1, "2");
+            pcSerial.println("Bacon\n");
+          break;
+          case 24:
+          // write your action code here
+            easyvr.playSound(7, EasyVR::VOL_FULL);
+            easyvr.playSound(12, EasyVR::VOL_FULL);
+            mqttClient.publish(topicVRCommand, "Champagne", true);
+            mqttClient.publish(topicMoodSection, "2");
+            
+            mqttClient.publish(topicShelf4, "2");
+            pcSerial.println("Champagne\n");
+         break;
+      }
+      
       
     }else if (strcmp(payloadChar, "OK")==0) {
       easyvr.playSound(24, EasyVR::VOL_FULL);
@@ -421,7 +492,43 @@ void callback(char* topic, byte* payload, unsigned int length) {
       mqttClient.publish(topicMoodSection, "2");
       
       mqttClient.publish(topicShelf4, "3");
-      pcSerial.println("Pate\n");
+      pcSerial.println("Pate NAO\n");
+    }else{
+      
+      char * token = strtok(payloadChar, ":");
+      if(token!=NULL){
+        token = strtok(NULL, ":");
+         pcSerial.println("I LIKEEEEEE\n");
+         pcSerial.println(token);
+        if (strcmp(payloadChar, "Wine")==0) {
+          fFood = 4;
+          pcSerial.println("Wine\n");
+
+        }else if (strcmp(token, "Cookies")==0) {
+          fFood = 5;
+          pcSerial.println("CookiesZ\n");
+
+        }else if (strcmp(token, "Candy")==0) {
+          fFood = 13;
+          pcSerial.println("Candy\n");
+        }else if (strcmp(token, "Soda")==0) {
+           fFood = 19;
+          pcSerial.println("Soda\n");
+      
+       }else if (strcmp(token, "Bacon")==0) {
+           fFood = 20;
+          pcSerial.println("Bacon\n");
+      
+       }else if (strcmp(token, "Coke")==0) {
+           fFood = 15;
+          pcSerial.println("Soda\n");
+          
+       }else if (strcmp(token, "Champagne")==0) {
+           fFood = 24;
+          pcSerial.println("Champagne\n");
+          
+       }
+      }
     }
   } 
 }
@@ -1038,6 +1145,73 @@ void action()
 
       pcSerial.println("Have some\n");
       pcSerial.println(fFood);
+
+      switch(fFood){
+          case 4:
+            easyvr.playSound(39, EasyVR::VOL_FULL);
+            easyvr.playSound(9, EasyVR::VOL_FULL);
+            mqttClient.publish(topicVRCommand, "Wine", true);
+            mqttClient.publish(topicMoodSection, "1");
+      
+            mqttClient.publish(topicShelf1, "1");
+            pcSerial.println("Wine\n");
+          break;
+          case 5:
+            easyvr.playSound(14, EasyVR::VOL_FULL);
+            easyvr.playSound(9, EasyVR::VOL_FULL);
+            mqttClient.publish(topicVRCommand, "Cookies", true);
+            mqttClient.publish(topicMoodSection, "1");
+      
+            mqttClient.publish(topicShelf1, "2");
+          break;
+          case 13:
+            easyvr.playSound(6, EasyVR::VOL_FULL);
+            easyvr.playSound(11, EasyVR::VOL_FULL);
+            mqttClient.publish(topicVRCommand, "Candy", true);
+            mqttClient.publish(topicMoodSection, "2");
+      
+            mqttClient.publish(topicShelf3, "2");
+          break;
+          case 15:
+                // write your action code here
+            easyvr.playSound(13, EasyVR::VOL_FULL);
+            easyvr.playSound(11, EasyVR::VOL_FULL);
+            mqttClient.publish(topicVRCommand, "Soda", true);
+            mqttClient.publish(topicMoodSection, "2");
+      
+            mqttClient.publish(topicShelf3, "4");
+            pcSerial.println("Soda\n");
+          break;
+          case 19:
+                // write your action code here
+            easyvr.playSound(13, EasyVR::VOL_FULL);
+            easyvr.playSound(11, EasyVR::VOL_FULL);
+            mqttClient.publish(topicVRCommand, "Soda", true);
+            mqttClient.publish(topicMoodSection, "2");
+      
+            mqttClient.publish(topicShelf3, "4");
+            pcSerial.println("Soda\n");
+          break;
+          case 20:
+            easyvr.playSound(3, EasyVR::VOL_FULL);
+            easyvr.playSound(9, EasyVR::VOL_FULL);
+            mqttClient.publish(topicVRCommand, "Bacon", true);
+            mqttClient.publish(topicMoodSection, "1");
+      
+            mqttClient.publish(topicShelf1, "2");
+            pcSerial.println("Bacon\n");
+          break;
+          case 24:
+          // write your action code here
+            easyvr.playSound(7, EasyVR::VOL_FULL);
+            easyvr.playSound(12, EasyVR::VOL_FULL);
+            mqttClient.publish(topicVRCommand, "Champagne", true);
+            mqttClient.publish(topicMoodSection, "2");
+            
+            mqttClient.publish(topicShelf4, "2");
+            pcSerial.println("Champagne\n");
+         break;
+      }
       
       // group = GROUP_X\SET_X; <-- or jump to another group or wordset for composite commands
       break;
@@ -1063,6 +1237,7 @@ void action()
       //signal that setting will be edited
       //save the next food to be mentioned
       //sugest it to the user
+      easyvr.playSound(0, EasyVR::VOL_FULL);
       group = GROUP_2;
       break;
     }
@@ -1074,49 +1249,56 @@ void action()
       // write your action code here
       // group = GROUP_X\SET_X; <-- or jump to another group or wordset for composite commands
       pcSerial.println("Favourite food set\n");
-      fFood = idx;
+      fFood =4;
+      easyvr.playSound(0, EasyVR::VOL_FULL);
       group = GROUP_1;
       break;
     case G2_COOKIES:
       // write your action code here
       // group = GROUP_X\SET_X; <-- or jump to another group or wordset for composite commands
       pcSerial.println("Favourite food set\n");
-      fFood = idx;
+      easyvr.playSound(0, EasyVR::VOL_FULL);
+      fFood = 5;
       group = GROUP_1;
       break;
     case G2_CANDY:
       // write your action code here
       // group = GROUP_X\SET_X; <-- or jump to another group or wordset for composite commands
       pcSerial.println("Favourite food set\n");
-      fFood = idx;
+      fFood = 13;
+      easyvr.playSound(0, EasyVR::VOL_FULL);
       group = GROUP_1;
       break;
     case G2_COKE:
       // write your action code here
       // group = GROUP_X\SET_X; <-- or jump to another group or wordset for composite commands
       pcSerial.println("Favourite food set\n");
-      fFood = idx;
+      fFood = 15;
+      easyvr.playSound(0, EasyVR::VOL_FULL);
       group = GROUP_1;
       break;
     case G2_SODA:
       // write your action code here
       // group = GROUP_X\SET_X; <-- or jump to another group or wordset for composite commands
       pcSerial.println("Favourite food set\n");
-      fFood = idx;
+      easyvr.playSound(0, EasyVR::VOL_FULL);
+      fFood = 19;
       group = GROUP_1;
       break;
     case G2_BACON:
       // write your action code here
       // group = GROUP_X\SET_X; <-- or jump to another group or wordset for composite commands
       pcSerial.println("Favourite food set\n");
-      fFood = idx;
+      fFood = 20;
+      easyvr.playSound(0, EasyVR::VOL_FULL);
       group = GROUP_1;
       break;
     case G2_CHAMPAGNE:
       // write your action code here
       // group = GROUP_X\SET_X; <-- or jump to another group or wordset for composite commands
       pcSerial.println("Favourite food set\n");
-      fFood = idx;
+      fFood = 24;
+      easyvr.playSound(0, EasyVR::VOL_FULL);
       group = GROUP_1;
       break;
     case G2_BACK:
