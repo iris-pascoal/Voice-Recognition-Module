@@ -226,7 +226,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
           break;
           case 5:
             easyvr.playSound(14, EasyVR::VOL_FULL);
-            easyvr.playSound(9, EasyVR::VOL_FULL);
+            easyvr.playSound(10, EasyVR::VOL_FULL);
             mqttClient.publish(topicVRCommand, "Cookies", true);
             mqttClient.publish(topicMoodSection, "1");
       
@@ -234,7 +234,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
           break;
           case 13:
             easyvr.playSound(6, EasyVR::VOL_FULL);
-            easyvr.playSound(11, EasyVR::VOL_FULL);
+            easyvr.playSound(10, EasyVR::VOL_FULL);
             mqttClient.publish(topicVRCommand, "Candy", true);
             mqttClient.publish(topicMoodSection, "1");
       
@@ -243,7 +243,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
           case 15:
                 // write your action code here
             easyvr.playSound(13, EasyVR::VOL_FULL);
-            easyvr.playSound(11, EasyVR::VOL_FULL);
+            easyvr.playSound(9, EasyVR::VOL_FULL);
             mqttClient.publish(topicVRCommand, "Coke", true);
             mqttClient.publish(topicMoodSection, "1");
       
@@ -253,7 +253,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
           case 19:
                 // write your action code here
             easyvr.playSound(33, EasyVR::VOL_FULL);
-            easyvr.playSound(11, EasyVR::VOL_FULL);
+            easyvr.playSound(9, EasyVR::VOL_FULL);
             mqttClient.publish(topicVRCommand, "Soda", true);
             mqttClient.publish(topicMoodSection, "1");
       
@@ -262,7 +262,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
           break;
           case 20:
             easyvr.playSound(3, EasyVR::VOL_FULL);
-            easyvr.playSound(9, EasyVR::VOL_FULL);
+            easyvr.playSound(11, EasyVR::VOL_FULL);
             mqttClient.publish(topicVRCommand, "Bacon", true);
             mqttClient.publish(topicMoodSection, "2");
       
@@ -272,7 +272,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
           case 24:
           // write your action code here
             easyvr.playSound(7, EasyVR::VOL_FULL);
-            easyvr.playSound(12, EasyVR::VOL_FULL);
+            easyvr.playSound(9, EasyVR::VOL_FULL);
             mqttClient.publish(topicVRCommand, "Champagne", true);
             mqttClient.publish(topicMoodSection, "1");
             
@@ -300,7 +300,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
     }else if (strcmp(payloadChar, "Cookies")==0) {
       easyvr.playSound(14, EasyVR::VOL_FULL);
-      easyvr.playSound(9, EasyVR::VOL_FULL);
+      easyvr.playSound(10, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Cookies", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -318,7 +318,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Pasta")==0) {
       easyvr.playSound(27, EasyVR::VOL_FULL);
-      easyvr.playSound(9, EasyVR::VOL_FULL);
+      easyvr.playSound(11, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Pasta", true);
       mqttClient.publish(topicMoodSection, "2");
 
@@ -327,7 +327,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Ketchup")==0) {
       easyvr.playSound(21, EasyVR::VOL_FULL);
-      easyvr.playSound(10, EasyVR::VOL_FULL);
+      easyvr.playSound(12, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand,"Ketchup", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -336,7 +336,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
     }else if (strcmp(payloadChar, "Tomatos")==0) {
       easyvr.playSound(36, EasyVR::VOL_FULL);
-      easyvr.playSound(10, EasyVR::VOL_FULL);
+      easyvr.playSound(11, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand,"Tomatos", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -345,7 +345,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Beans")==0) {
       easyvr.playSound(4, EasyVR::VOL_FULL);
-      easyvr.playSound(10, EasyVR::VOL_FULL);
+      easyvr.playSound(11, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand,"Beans", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -354,7 +354,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Sugar")==0) {
       easyvr.playSound(35, EasyVR::VOL_FULL);
-      easyvr.playSound(10, EasyVR::VOL_FULL);
+      easyvr.playSound(12, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand,"Sugar", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -363,7 +363,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Salt")==0) {
       easyvr.playSound(32, EasyVR::VOL_FULL);
-      easyvr.playSound(11, EasyVR::VOL_FULL);
+      easyvr.playSound(12, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand,"Salt", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -372,7 +372,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Candy")==0) {
       easyvr.playSound(6, EasyVR::VOL_FULL);
-      easyvr.playSound(11, EasyVR::VOL_FULL);
+      easyvr.playSound(10, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Candy", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -380,7 +380,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       pcSerial.println("Candy\n");
     }else if (strcmp(payloadChar, "Pepper")==0) {
       easyvr.playSound(29, EasyVR::VOL_FULL);
-      easyvr.playSound(11, EasyVR::VOL_FULL);
+      easyvr.playSound(12, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Pepper", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -389,7 +389,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Coke")==0) {
       easyvr.playSound(13, EasyVR::VOL_FULL);
-      easyvr.playSound(11, EasyVR::VOL_FULL);
+      easyvr.playSound(9, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Soda", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -398,7 +398,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Water")==0) {
       easyvr.playSound(38, EasyVR::VOL_FULL);
-      easyvr.playSound(12, EasyVR::VOL_FULL);
+      easyvr.playSound(9, EasyVR::VOL_FULL);
       
       mqttClient.publish(topicVRCommand, "Water", true);
       mqttClient.publish(topicMoodSection, "1");
@@ -408,7 +408,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Bread")==0) {
       easyvr.playSound(5, EasyVR::VOL_FULL);
-      easyvr.playSound(12, EasyVR::VOL_FULL);
+      easyvr.playSound(10, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Bread", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -417,7 +417,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Milk")==0) {
       easyvr.playSound(23, EasyVR::VOL_FULL);
-      easyvr.playSound(12, EasyVR::VOL_FULL);
+      easyvr.playSound(9, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Milk", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -426,7 +426,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Soda")==0) {
       easyvr.playSound(33, EasyVR::VOL_FULL);
-      easyvr.playSound(12, EasyVR::VOL_FULL);
+      easyvr.playSound(9, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Soda", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -444,7 +444,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Bacon")==0) {
       easyvr.playSound(3, EasyVR::VOL_FULL);
-      easyvr.playSound(9, EasyVR::VOL_FULL);
+      easyvr.playSound(11, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Bacon", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -453,7 +453,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Foie Gras")==0) {
       easyvr.playSound(17, EasyVR::VOL_FULL);
-      easyvr.playSound(9, EasyVR::VOL_FULL);
+      easyvr.playSound(10, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Foie Gras", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -462,7 +462,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Eggs")==0) {
       easyvr.playSound(16, EasyVR::VOL_FULL);
-      easyvr.playSound(9, EasyVR::VOL_FULL);
+      easyvr.playSound(12, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Eggs", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -471,7 +471,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Croissant")==0) {
       easyvr.playSound(15, EasyVR::VOL_FULL);
-      easyvr.playSound(12, EasyVR::VOL_FULL);
+      easyvr.playSound(10, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Croissant", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -479,7 +479,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       pcSerial.println("Croissant\n");
     }else if (strcmp(payloadChar, "Champagne")==0) {
       easyvr.playSound(7, EasyVR::VOL_FULL);
-      easyvr.playSound(12, EasyVR::VOL_FULL);
+      easyvr.playSound(9, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Champagne", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -488,7 +488,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       
     }else if (strcmp(payloadChar, "Pate")==0) {
       easyvr.playSound(28, EasyVR::VOL_FULL);
-      easyvr.playSound(12, EasyVR::VOL_FULL);
+      easyvr.playSound(10, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Pate", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -843,7 +843,7 @@ void action()
     case G1_COOKIES:
       // write your action code here
       easyvr.playSound(14, EasyVR::VOL_FULL);
-      easyvr.playSound(9, EasyVR::VOL_FULL);
+      easyvr.playSound(10, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Cookies", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -869,7 +869,7 @@ void action()
     case G1_PASTA:
       // write your action code here
       easyvr.playSound(27, EasyVR::VOL_FULL);
-      easyvr.playSound(9, EasyVR::VOL_FULL);
+      easyvr.playSound(11, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Pasta", true);
       mqttClient.publish(topicMoodSection, "2");
 
@@ -882,7 +882,7 @@ void action()
     case G1_KETCHUP:
       // write your action code here
       easyvr.playSound(21, EasyVR::VOL_FULL);
-      easyvr.playSound(10, EasyVR::VOL_FULL);
+      easyvr.playSound(12, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand,"Ketchup", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -895,7 +895,7 @@ void action()
     case G1_TOMATOS:
       // write your action code here
       easyvr.playSound(36, EasyVR::VOL_FULL);
-      easyvr.playSound(10, EasyVR::VOL_FULL);
+      easyvr.playSound(11, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand,"Tomatos", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -908,7 +908,7 @@ void action()
     case G1_BEANS:
       // write your action code here
       easyvr.playSound(4, EasyVR::VOL_FULL);
-      easyvr.playSound(10, EasyVR::VOL_FULL);
+      easyvr.playSound(11, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand,"Beans", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -921,7 +921,7 @@ void action()
     case G1_SUGAR:
       // write your action code here
       easyvr.playSound(35, EasyVR::VOL_FULL);
-      easyvr.playSound(10, EasyVR::VOL_FULL);
+      easyvr.playSound(12, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand,"Sugar", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -934,7 +934,7 @@ void action()
     case G1_SALT:
       // write your action code here
       easyvr.playSound(32, EasyVR::VOL_FULL);
-      easyvr.playSound(11, EasyVR::VOL_FULL);
+      easyvr.playSound(12, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand,"Salt", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -947,7 +947,7 @@ void action()
     case G1_CANDY:
       // write your action code here
       easyvr.playSound(6, EasyVR::VOL_FULL);
-      easyvr.playSound(11, EasyVR::VOL_FULL);
+      easyvr.playSound(10, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Candy", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -960,7 +960,7 @@ void action()
     case G1_PEPPER:
       // write your action code here
       easyvr.playSound(29, EasyVR::VOL_FULL);
-      easyvr.playSound(11, EasyVR::VOL_FULL);
+      easyvr.playSound(12, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Pepper", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -973,7 +973,7 @@ void action()
     case G1_COKE:
       // write your action code here
       easyvr.playSound(13, EasyVR::VOL_FULL);
-      easyvr.playSound(11, EasyVR::VOL_FULL);
+      easyvr.playSound(9, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Soda", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -986,7 +986,7 @@ void action()
     case G1_WATER:
       // write your action code here
       easyvr.playSound(38, EasyVR::VOL_FULL);
-      easyvr.playSound(12, EasyVR::VOL_FULL);
+      easyvr.playSound(9, EasyVR::VOL_FULL);
       
       mqttClient.publish(topicVRCommand, "Water", true);
       mqttClient.publish(topicMoodSection, "1");
@@ -1000,7 +1000,7 @@ void action()
     case G1_BREAD:
       // write your action code here
       easyvr.playSound(5, EasyVR::VOL_FULL);
-      easyvr.playSound(12, EasyVR::VOL_FULL);
+      easyvr.playSound(10, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Bread", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -1013,7 +1013,7 @@ void action()
     case G1_MILK:
       // write your action code here  
       easyvr.playSound(23, EasyVR::VOL_FULL);
-      easyvr.playSound(12, EasyVR::VOL_FULL);
+      easyvr.playSound(9, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Milk", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -1026,7 +1026,7 @@ void action()
     case G1_SODA:
       // write your action code here
       easyvr.playSound(33, EasyVR::VOL_FULL);
-      easyvr.playSound(12, EasyVR::VOL_FULL);
+      easyvr.playSound(9, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Soda", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -1052,7 +1052,7 @@ void action()
     case G1_BACON:
       // write your action code here
       easyvr.playSound(3, EasyVR::VOL_FULL);
-      easyvr.playSound(9, EasyVR::VOL_FULL);
+      easyvr.playSound(11, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Bacon", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -1065,7 +1065,7 @@ void action()
     case G1_FOIE_GRAS:
       // write your action code here
       easyvr.playSound(17, EasyVR::VOL_FULL);
-      easyvr.playSound(9, EasyVR::VOL_FULL);
+      easyvr.playSound(10, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Foie Gras", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -1078,7 +1078,7 @@ void action()
     case G1_EGGS:
       // write your action code her
       easyvr.playSound(16, EasyVR::VOL_FULL);
-      easyvr.playSound(9, EasyVR::VOL_FULL);
+      easyvr.playSound(12, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Eggs", true);
       mqttClient.publish(topicMoodSection, "2");
       
@@ -1091,7 +1091,7 @@ void action()
     case G1_CROISSANT:
       // write your action code here
       easyvr.playSound(15, EasyVR::VOL_FULL);
-      easyvr.playSound(12, EasyVR::VOL_FULL);
+      easyvr.playSound(10, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Croissant", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -1104,7 +1104,7 @@ void action()
     case G1_CHAMPAGNE:
       // write your action code here
       easyvr.playSound(7, EasyVR::VOL_FULL);
-      easyvr.playSound(12, EasyVR::VOL_FULL);
+      easyvr.playSound(9, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Champagne", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -1117,7 +1117,7 @@ void action()
     case G1_PATE:
       // write your action code here
       easyvr.playSound(28, EasyVR::VOL_FULL);
-      easyvr.playSound(12, EasyVR::VOL_FULL);
+      easyvr.playSound(10, EasyVR::VOL_FULL);
       mqttClient.publish(topicVRCommand, "Pate", true);
       mqttClient.publish(topicMoodSection, "1");
       
@@ -1159,7 +1159,7 @@ void action()
           break;
           case 5:
             easyvr.playSound(14, EasyVR::VOL_FULL);
-            easyvr.playSound(9, EasyVR::VOL_FULL);
+            easyvr.playSound(10, EasyVR::VOL_FULL);
             mqttClient.publish(topicVRCommand, "Cookies", true);
             mqttClient.publish(topicMoodSection, "1");
       
@@ -1167,7 +1167,7 @@ void action()
           break;
           case 13:
             easyvr.playSound(6, EasyVR::VOL_FULL);
-            easyvr.playSound(11, EasyVR::VOL_FULL);
+            easyvr.playSound(10, EasyVR::VOL_FULL);
             mqttClient.publish(topicVRCommand, "Candy", true);
             mqttClient.publish(topicMoodSection, "1");
       
@@ -1176,7 +1176,7 @@ void action()
           case 15:
                 // write your action code here
             easyvr.playSound(13, EasyVR::VOL_FULL);
-            easyvr.playSound(11, EasyVR::VOL_FULL);
+            easyvr.playSound(9, EasyVR::VOL_FULL);
             mqttClient.publish(topicVRCommand, "Soda", true);
             mqttClient.publish(topicMoodSection, "1");
       
@@ -1186,7 +1186,7 @@ void action()
           case 19:
                 // write your action code here
             easyvr.playSound(33, EasyVR::VOL_FULL);
-            easyvr.playSound(11, EasyVR::VOL_FULL);
+            easyvr.playSound(9, EasyVR::VOL_FULL);
             mqttClient.publish(topicVRCommand, "Soda", true);
             mqttClient.publish(topicMoodSection, "1");
       
@@ -1195,7 +1195,7 @@ void action()
           break;
           case 20:
             easyvr.playSound(3, EasyVR::VOL_FULL);
-            easyvr.playSound(9, EasyVR::VOL_FULL);
+            easyvr.playSound(11, EasyVR::VOL_FULL);
             mqttClient.publish(topicVRCommand, "Bacon", true);
             mqttClient.publish(topicMoodSection, "2");
       
@@ -1205,7 +1205,7 @@ void action()
           case 24:
           // write your action code here
             easyvr.playSound(7, EasyVR::VOL_FULL);
-            easyvr.playSound(12, EasyVR::VOL_FULL);
+            easyvr.playSound(9, EasyVR::VOL_FULL);
             mqttClient.publish(topicVRCommand, "Champagne", true);
             mqttClient.publish(topicMoodSection, "1");
             
