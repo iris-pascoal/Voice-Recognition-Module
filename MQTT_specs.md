@@ -152,7 +152,7 @@
 
 | Name   | Type   | Description                   | Values                                                   | Required |
 |--------|--------|-------------------------------|----------------------------------------------------------|----------|
-| section| string | Section of led to be turned ON| 0-OFF<br> 1-Wine<br> 2-Cookies<br>3-Apples<br>4-Pasta<br>| true     |
+| section| string | Section of led to be turned ON| 0-OFF<br> 1-Wine<br> 2-Cookies or Bacon<br>3-Apples or Foie Gras<br>4-Pasta or Eggs<br>| true     |
 
 ## "shelf1/status"
 
@@ -166,7 +166,7 @@
 
 | Name   | Type   | Description                   | Values                                                   | Required |
 |--------|--------|-------------------------------|----------------------------------------------------------|----------|
-| section| string | Section of led to be turned ON| 0-OFF<br> 1-Wine<br> 2-Gin<br> 3-Cookies<br> 4-Apples<br>| true     |
+| section| string | Section of led to be turned ON| 0-OFF<br> 1-Wine<br> 2-Cookies or Bacon<br>3-Apples or Foie Gras<br>4-Pasta or Eggs<br>| true     |
 
 ## "shelf2"
 
@@ -236,7 +236,7 @@
 
 | Name   | Type   | Description                   | Values                                                       | Required |
 |--------|--------|-------------------------------|--------------------------------------------------------------|----------|
-| section| string | Section of led to be turned ON| 0-OFF<br> 1-Water<br> 2-Bread<br> 3-Milk<br> 4-Soda<br>| true     |
+| section| string | Section of led to be turned ON| 0-OFF<br> 1-Water or Croissant<br> 2-Bread or Champagne<br> 3-Milk r Pate<br> 4-Soda<br>| true     |
 
 ## "shelf4/status"
 
@@ -250,7 +250,7 @@
 
 | Name   | Type   | Description                   | Values                                                       | Required |
 |--------|--------|-------------------------------|--------------------------------------------------------------|----------|
-| section| string | Section of led to be turned ON| 0-OFF<br> 1-Water<br> 2-Bread<br> 3-Milk<br> 4-Soda<br>| true     |
+| section| string | Section of led to be turned ON| 0-OFF<br> 1-Water or Croissant<br> 2-Bread or Champagne<br> 3-Milk or Pate<br> 4-Soda<br>| true     |
 
 ## "shelf/color/*"
 
@@ -259,21 +259,26 @@
 |Value  | Description   |
 |-------|---------------|
 |0      |Wine section   |
-|1      |Gin section    |
-|2      |Cookies section|
-|3      |Apples section |
-|4      |Pasta section  |
-|5      |Ketchup section|
-|6      |Rice section   |
-|7      |Water section  |
-|8      |Wine section   |
-|9      |Gin section    |
-|10     |Cookies section|
-|11     |Apples section |
-|12     |Pasta section  |
-|13     |Ketchup section|
-|14     |Rice section   |
-|15     |Water section  |
+|1      |Cookies section    |
+|2      |Apples section|
+|3      |Pasta section |
+|4      |Ketchup section  |
+|5      |Tomatos section|
+|6      |Beans section   |
+|7      |Sugar section  |
+|8      |Salt section   |
+|9      |Candy section    |
+|10     |Pepper section|
+|11     |Coke section |
+|12     |Water section  |
+|13     |Bread section|
+|14     |Milk section   |
+|15     |Soda section  |
+|16     |Bacon section |
+|17     |Foie Gras section  |
+|18     |Eggs section|
+|19     |Croissant section   |
+|20     |Champagne section  |
 
 **Description**: Changes the color of a section of the shelves<br>
 **Payload**: string<br>
@@ -290,25 +295,29 @@
 ## "shelf/color/*/status"
 
 ### *from  0 to 15:
-
 |Value  | Description   |
 |-------|---------------|
 |0      |Wine section   |
-|1      |Gin section    |
-|2      |Cookies section|
-|3      |Apples section |
-|4      |Pasta section  |
-|5      |Ketchup section|
-|6      |Rice section   |
-|7      |Water section  |
-|8      |Wine section   |
-|9      |Gin section    |
-|10     |Cookies section|
-|11     |Apples section |
-|12     |Pasta section  |
-|13     |Ketchup section|
-|14     |Rice section   |
-|15     |Water section  |
+|1      |Cookies section    |
+|2      |Apples section|
+|3      |Pasta section |
+|4      |Ketchup section  |
+|5      |Tomatos section|
+|6      |Beans section   |
+|7      |Sugar section  |
+|8      |Salt section   |
+|9      |Candy section    |
+|10     |Pepper section|
+|11     |Coke section |
+|12     |Water section  |
+|13     |Bread section|
+|14     |Milk section   |
+|15     |Soda section  |
+|16     |Bacon section |
+|17     |Foie Gras section  |
+|18     |Eggs section|
+|19     |Croissant section   |
+|20     |Champagne section  |
 
 **Description**: Announces the color of the respective shelf section<br>
 **Payload**: string<br>
