@@ -94,7 +94,7 @@
 
 | Name   | Type   | Description                       | Values                         | Required |
 |--------|--------|-----------------------------------|--------------------------------|----------|
-| section  | string | Section of the main led strip to be turned ON| 0-OFF<br>1- Closet 1<br>2- Closet 2<br>3-Closet 3<br>4-Closet 4<br>5-Closet 5<br>6-Closet 6 | true     |
+| section  | string | Section of the main led strip to be turned ON| 0-OFF<br>1- Closet 1<br> | true     |
 
 ## "mood/section/status"
 
@@ -108,7 +108,7 @@
 
 | Name   | Type   | Description                       | Values                         | Required |
 |--------|--------|-----------------------------------|--------------------------------|----------|
-| section  | string | Section of the main led strip to be turned ON| 0-OFF<br>1- Closet 1<br>2- Closet 2<br>3-Closet 3<br>4-Closet 4<br>5-Closet 5<br>6-Closet 6 | true     |
+| section  | string | Section of the main led strip to be turned ON| 0-OFF<br>1- Closet 1<br>2- Closet 2 | true     |
 
 ## "mood/section/color"
 
@@ -152,7 +152,7 @@
 
 | Name   | Type   | Description                   | Values                                                   | Required |
 |--------|--------|-------------------------------|----------------------------------------------------------|----------|
-| section| string | Section of led to be turned ON| 0-OFF<br> 1-Wine<br> 2-Cookies<br>3-Apples<br>4-Pasta<br>| true     |
+| section| string | Section of led to be turned ON| 0-OFF<br> 1-Water or Milk<br> 2- Wine or Champagne<br>3-Soda or Coke<br>4-Apples<br>| true     |
 
 ## "shelf1/status"
 
@@ -166,7 +166,7 @@
 
 | Name   | Type   | Description                   | Values                                                   | Required |
 |--------|--------|-------------------------------|----------------------------------------------------------|----------|
-| section| string | Section of led to be turned ON| 0-OFF<br> 1-Wine<br> 2-Gin<br> 3-Cookies<br> 4-Apples<br>| true     |
+| section| string | Section of led to be turned ON| 0-OFF<br> 1-Water or Milk<br> 2- Wine or Champagne<br>3-Soda or Coke<br>4-Apples<br>| true     |
 
 ## "shelf2"
 
@@ -180,7 +180,7 @@
 
 | Name   | Type   | Description                   | Values                                                       | Required |
 |--------|--------|-------------------------------|--------------------------------------------------------------|----------|
-| section| string | Section of led to be turned ON| 0-OFF<br> 1-Ketchup<br> 2-Tomatos<br> 3-Beans<br> 4-Sugar<br>| true     |
+| section| string | Section of led to be turned ON| 0-OFF<br> 1-Candy or Cookies<br> 2-Croissant or Bread<br> 3-Pate<br> 4-Foie Gras<br>| true     |
 
 ## "shelf2/staus"
 
@@ -194,7 +194,7 @@
 
 | Name   | Type   | Description                   | Values                                                       | Required |
 |--------|--------|-------------------------------|--------------------------------------------------------------|----------|
-| section| string | Section of led to be turned ON| 0-OFF<br> 1-Ketchup<br> 2-Tomatos<br> 3-Beans<br> 4-Sugar<br>| true     |
+| section| string | Section of led to be turned ON| 0-OFF<br> 1-Candy or Cookies<br> 2-Croissant or Bread<br> 3-Pate<br> 4-Foie Gras<br>| true     |
 
 ## "shelf3"
 
@@ -208,7 +208,7 @@
 
 | Name   | Type   | Description                   | Values                                                       | Required |
 |--------|--------|-------------------------------|--------------------------------------------------------------|----------|
-| section| string | Section of led to be turned ON| 0-OFF<br> 1-Salt <br> 2-Candy<br> 3-Pepper<br> 4-Coke<br>| true     |
+| section| string | Section of led to be turned ON| 0-OFF<br> 1-Pasta <br> 2-Tomatos<br> 3-Beans<br> 4-Bacon<br>| true     |
 
 ## "shelf3/status"
 
@@ -222,7 +222,7 @@
 
 | Name   | Type   | Description                   | Values                                                       | Required |
 |--------|--------|-------------------------------|--------------------------------------------------------------|----------|
-| section| string | Section of led to be turned ON| 0-OFF<br> 1-Salt <br> 2-Candy<br> 3-Pepper<br> 4-Coke<br>| true     |
+| section| string | Section of led to be turned ON| 0-OFF<br> 1-Pasta <br> 2-Tomatos<br> 3-Beans<br> 4-Bacon<br>| true     |
 
 ## "shelf4"
 
@@ -236,7 +236,7 @@
 
 | Name   | Type   | Description                   | Values                                                       | Required |
 |--------|--------|-------------------------------|--------------------------------------------------------------|----------|
-| section| string | Section of led to be turned ON| 0-OFF<br> 1-Water<br> 2-Bread<br> 3-Milk<br> 4-Soda<br>| true     |
+| section| string | Section of led to be turned ON| 0-OFF<br> 1-Eggs<br> 2-Pepper or Salt<br> 3-Sugar<br> 4-Ketchup<br>| true     |
 
 ## "shelf4/status"
 
@@ -250,7 +250,7 @@
 
 | Name   | Type   | Description                   | Values                                                       | Required |
 |--------|--------|-------------------------------|--------------------------------------------------------------|----------|
-| section| string | Section of led to be turned ON| 0-OFF<br> 1-Water<br> 2-Bread<br> 3-Milk<br> 4-Soda<br>| true     |
+| section| string | Section of led to be turned ON| 0-OFF<br> 1-Eggs<br> 2-Pepper or Salt<br> 3-Sugar<br> 4-Ketchup<br>| true     |
 
 ## "shelf/color/*"
 
@@ -258,22 +258,22 @@
 
 |Value  | Description   |
 |-------|---------------|
-|0      |Wine section   |
-|1      |Gin section    |
-|2      |Cookies section|
+|0      |Water/Milk section   |
+|1      |Wine/Champagne section  |
+|2      |Soda/Coke section|
 |3      |Apples section |
-|4      |Pasta section  |
-|5      |Ketchup section|
-|6      |Rice section   |
-|7      |Water section  |
-|8      |Wine section   |
-|9      |Gin section    |
-|10     |Cookies section|
-|11     |Apples section |
-|12     |Pasta section  |
-|13     |Ketchup section|
-|14     |Rice section   |
-|15     |Water section  |
+|4      |Candy/Cookies section  |
+|5      |Croissant/Bread section|
+|6      |Pate section   |
+|7      |Foie Gras section  |
+|8      |Pasta section   |
+|9      |Tomatos section    |
+|10     |Beans section|
+|11     |Bacon section |
+|12     |Eggs section  |
+|13     |Pepper/salt section|
+|14     |Sugar section   |
+|15     |Ketchup section  |
 
 **Description**: Changes the color of a section of the shelves<br>
 **Payload**: string<br>
@@ -293,22 +293,22 @@
 
 |Value  | Description   |
 |-------|---------------|
-|0      |Wine section   |
-|1      |Gin section    |
-|2      |Cookies section|
+|0      |Water/Milk section   |
+|1      |Wine/Champagne section  |
+|2      |Soda/Coke section|
 |3      |Apples section |
-|4      |Pasta section  |
-|5      |Ketchup section|
-|6      |Rice section   |
-|7      |Water section  |
-|8      |Wine section   |
-|9      |Gin section    |
-|10     |Cookies section|
-|11     |Apples section |
-|12     |Pasta section  |
-|13     |Ketchup section|
-|14     |Rice section   |
-|15     |Water section  |
+|4      |Candy/Cookies section  |
+|5      |Croissant/Bread section|
+|6      |Pate section   |
+|7      |Foie Gras section  |
+|8      |Pasta section   |
+|9      |Tomatos section    |
+|10     |Beans section|
+|11     |Bacon section |
+|12     |Eggs section  |
+|13     |Pepper/salt section|
+|14     |Sugar section   |
+|15     |Ketchup section  |
 
 **Description**: Announces the color of the respective shelf section<br>
 **Payload**: string<br>
@@ -367,28 +367,28 @@ Avaliable voice commands
 |HAPPY          |Sets happy mood |
 |SAD            |Sets sad mood |
 |OKAY  	        |Sets neutral mood |
-|Wine           |Foods from the closet nº4 |
-|Cookies        |Foods from the closet nº4 |
-|Apples         |Foods from the closet nº4 |
-|Pasta          |Foods from the closet nº4 |
-|Ketchup        |Foods from the closet nº4 |
-|Tomatos        |Foods from the closet nº4 |
-|Beans          |Foods from the closet nº4 |
-|Sugar          |Foods from the closet nº4 |
+|Wine           |Foods from the closet nº1 |
+|Cookies        |Foods from the closet nº1 |
+|Apples         |Foods from the closet nº1 |
+|Pasta          |Foods from the closet nº2 |
+|Ketchup        |Foods from the closet nº2 |
+|Tomatos        |Foods from the closet nº2 |
+|Beans          |Foods from the closet nº2 |
+|Sugar          |Foods from the closet nº2 |
 |Salt           |Foods from the closet nº1 |
-|Candy          |Foods from the closet nº1 |
+|Candy          |Foods from the closet nº2 |
 |Pepper         |Foods from the closet nº2 |
-|Coke           |Foods from the closet nº3 |
-|Water          |Foods from the closet nº5 |
-|Bread          |Foods from the closet nº6 |
+|Coke           |Foods from the closet nº1 |
+|Water          |Foods from the closet nº1 |
+|Bread          |Foods from the closet nº1 |
 |Milk           |Foods from the closet nº1 |
-|Soda           |Foods from the closet nº3 |
+|Soda           |Foods from the closet nº1 |
 |Bacon          |Foods from the closet nº2 |
-|Foie Gras      |Foods from the closet nº3 |
-|Eggs           |Foods from the closet nº5 |
-|Croissant      |Foods from the closet nº6 |
+|Foie Gras      |Foods from the closet nº1 |
+|Eggs           |Foods from the closet nº2 |
+|Croissant      |Foods from the closet nº1 |
 |Champagne      |Foods from the closet nº1 |
-|Pate           |Foods from the closet nº2 |
+|Pate           |Foods from the closet nº1 |
 |I_LIKE         |The "i like" voice command unlocks a new group of voice commands from which the user canchoose its favourite item. See table below. |
 
 
@@ -433,28 +433,28 @@ Syntax of commands
 |HAPPY          |Sets happy mood |
 |SAD            |Sets sad mood |
 |OKAY  	        |Sets neutral mood |
-|Wine           |Foods from the closet nº4 |
-|Cookies        |Foods from the closet nº4 |
-|Apples         |Foods from the closet nº4 |
-|Pasta          |Foods from the closet nº4 |
-|Ketchup        |Foods from the closet nº4 |
-|Tomatos        |Foods from the closet nº4 |
-|Beans          |Foods from the closet nº4 |
-|Sugar          |Foods from the closet nº4 |
+|Wine           |Foods from the closet nº1 |
+|Cookies        |Foods from the closet nº1 |
+|Apples         |Foods from the closet nº1 |
+|Pasta          |Foods from the closet nº2 |
+|Ketchup        |Foods from the closet nº2 |
+|Tomatos        |Foods from the closet nº2 |
+|Beans          |Foods from the closet nº2 |
+|Sugar          |Foods from the closet nº2 |
 |Salt           |Foods from the closet nº1 |
-|Candy          |Foods from the closet nº1 |
+|Candy          |Foods from the closet nº2 |
 |Pepper         |Foods from the closet nº2 |
-|Coke           |Foods from the closet nº3 |
-|Water          |Foods from the closet nº5 |
-|Bread          |Foods from the closet nº6 |
+|Coke           |Foods from the closet nº1 |
+|Water          |Foods from the closet nº1 |
+|Bread          |Foods from the closet nº1 |
 |Milk           |Foods from the closet nº1 |
-|Soda           |Foods from the closet nº3 |
+|Soda           |Foods from the closet nº1 |
 |Bacon          |Foods from the closet nº2 |
-|Foie Gras      |Foods from the closet nº3 |
-|Eggs           |Foods from the closet nº5 |
-|Croissant      |Foods from the closet nº6 |
+|Foie Gras      |Foods from the closet nº1 |
+|Eggs           |Foods from the closet nº2 |
+|Croissant      |Foods from the closet nº1 |
 |Champagne      |Foods from the closet nº1 |
-|Pate           |Foods from the closet nº2 |
+|Pate           |Foods from the closet nº1 |
 |I like:food    |The "i like" commands sets a favourite food for the user. Replace "food" with values from table below|
 
 
