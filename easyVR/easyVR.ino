@@ -215,7 +215,8 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
       switch(fFood){
           case 4:
-            easyvr.playSound(39, EasyVR::VOL_FULL);
+            //easyvr.playSound(39, EasyVR::VOL_FULL);
+            easyvr.playSound(40, EasyVR::VOL_FULL);
             easyvr.playSound(9, EasyVR::VOL_FULL);
             mqttClient.publish(topicVRCommand, "Wine", true);
             mqttClient.publish(topicMoodSection, "1");
@@ -243,15 +244,15 @@ void callback(char* topic, byte* payload, unsigned int length) {
                 // write your action code here
             easyvr.playSound(13, EasyVR::VOL_FULL);
             easyvr.playSound(11, EasyVR::VOL_FULL);
-            mqttClient.publish(topicVRCommand, "Soda", true);
+            mqttClient.publish(topicVRCommand, "Coke", true);
             mqttClient.publish(topicMoodSection, "2");
       
             mqttClient.publish(topicShelf3, "4");
-            pcSerial.println("Soda\n");
+            pcSerial.println("Coke\n");
           break;
           case 19:
                 // write your action code here
-            easyvr.playSound(13, EasyVR::VOL_FULL);
+            easyvr.playSound(33, EasyVR::VOL_FULL);
             easyvr.playSound(11, EasyVR::VOL_FULL);
             mqttClient.publish(topicVRCommand, "Soda", true);
             mqttClient.publish(topicMoodSection, "2");
