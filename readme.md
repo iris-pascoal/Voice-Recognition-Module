@@ -2,13 +2,34 @@
 
 Voice recognition module for smart kitchen
 
-## Installing / Getting started
+## Authors
 
-This project is ran on a Arduino Uno Wifi. The packages needed are:
- - EasyVR
- - Bridge
- - PubSubClient
- - WiFiNINA
+Íris Lisboa (Original Developer) & Jorge S. Calado (Supervisor)
+
+## Hardware Requirements
+ - Arduino Uno Wifi: https://store.arduino.cc/products/arduino-uno-wifi-rev2
+ - EasyVR arduino shield: https://www.ptrobotics.com/shields-audio/3570-shield-easyvr-30-reconhecimento-de-voz.html
+ - Microphone - Any mic compatible with the easyVR shield
+
+## Required Libraries
+ - EasyVR.h
+ - SPI.h
+ - Bridge.h
+ - PubSubClient.h
+ - WiFiNINA.h
+
+## Other Requirements
+
+ - MQTT broker - see MQTT_specs.md for moore info
+
+## Installation/Getting started
+
+To get started on the voice recognition module you should first connect the shield to the arduino. After connecting the program is ready to start. See table below for the avaliable voice commands
+
+## Configurations
+
+ - In the ```secrets.h``` file the network ssid and password must be updated to the respective network configurations
+ - Configue the MQTT broker ```const char* server```
 
 ## Features
 
