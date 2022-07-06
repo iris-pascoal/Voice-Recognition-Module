@@ -5,9 +5,9 @@
 
 ## MQTT Diagrams
 
-<img src="mood.PNG" width="200"/>
-<img src="acd.PNG" width="200"/>
-<img src="shelf.PNG" width="200"/>
+<img src="files/mood.PNG" width="200"/>
+<img src="files/acd.PNG" width="200"/>
+<img src="files/shelf.PNG" width="200"/>
 
 
 
