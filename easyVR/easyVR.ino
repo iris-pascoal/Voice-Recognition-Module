@@ -221,7 +221,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
             mqttClient.publish(topicVRCommand, "Wine", true);
             mqttClient.publish(topicMoodSection, "4");
       
-            mqttClient.publish(topicShelf1, 1");
+            mqttClient.publish(topicShelf1, "1");
             pcSerial.println("Wine\n");
           break;
           case 5:
